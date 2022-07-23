@@ -1,0 +1,64 @@
+// See https://aka.ms/new-console-template for more information
+
+using System.IO;
+List<String> listBox1 = new List<String>();
+string winDir = System.Environment.GetEnvironmentVariable("windir");
+StreamReader reader = new StreamReader("f:\\ar\\es.txt");
+
+void addListItem(string value)
+{
+    listBox1.Add(value);
+}
+
+try
+{
+    do
+    {
+        String dato = null;
+        addListItem(dato = reader.ReadLine());
+        Console.WriteLine(dato);
+    }
+    while (reader.Peek() != -1);
+}
+catch
+{
+    addListItem("File is empty");
+}
+finally
+{
+    reader.Close();
+}
+
+int cont = 0;
+String cadena = "nombre";
+int cont3 = 0;
+String cadena3 = "apellido";
+int cont4 = 0;
+String cadena4 = "documento nacional de identidad";
+int cont5 = 0;
+String cadena5 = "edad";
+int cont6 = 0;
+String cadena6 = "ingenieria";
+String cartelnull = "NULL";
+String cartelnotnull = "NOT NULL";
+
+
+mostrarEncabezados(cadena,cadena3,cadena4,cadena5,cadena6);
+
+void mostrarEncabezados(String cadena,String cadena3,String cadena4,String cadena5,String cadena6){
+
+    Console.WriteLine(cadena + "  " + cadena3 + " " + cadena4+cadena5+cadena6);
+    Console.WriteLine(cartelnotnull + " " + cartelnull + " " + cartelnotnull + cartelnull + cartelnotnull);
+
+};
+
+
+void calendar(int dia,String actividad,int inicio,int fin)
+{
+
+     }
+    
+
+
+Console.WriteLine("Hello, World!");
+
